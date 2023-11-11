@@ -10,7 +10,7 @@ export const Tour = ({id,name, image, info, price}) => {
                     <h4 className="tour-price">${price}</h4>
                 </div>
                 <p>{info}</p>
-                <button className="delete-btn">Delete</button>
+                <button className="delete-btn">Not interested</button>
             </footer>
         </article>
     )
