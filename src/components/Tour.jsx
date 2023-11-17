@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
 
-export const Tour = ({id,name, image, info, price}) => {
+export const Tour = ({id,name, image, info, price, removeTour }) => {
+    // toggle text length
     const [readMore, setRead] = useState(false);
     return(
         <article className="single-tour">
@@ -13,7 +14,7 @@ export const Tour = ({id,name, image, info, price}) => {
                 </div>
                 <p>{readMore ? info : `${info.substring(0,200)}...`}
                 <button onClick={ () => setRead(!readMore)}>{readMore ? 'Show less' : 'Read more'}</button></p>
-                <button className="delete-btn">Not interested</button>
+                <button className="delete-btn" onClick={() => removeTour(id)}>Not interested</button>
             </footer>
         </article>
     )
